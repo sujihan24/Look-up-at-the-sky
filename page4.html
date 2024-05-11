@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Positioning Example</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+        
+    </style>
+    
+    <style>
+        
+        body {
+            background-image: url('1714641277610.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            height: 100vh;
+        }
+
+        header{
+            height: 300px;
+        }
+
+        .wrapper{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+        }
+        .image-container {
+            width: 300px;
+            position: relative;
+            text-align: center;
+        }
+
+        .image-container img {
+            width: 100%;
+        }
+
+        .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgb(255, 255, 255);
+            font-weight: 1400;
+            text-shadow: 2px 2px 0 rgb(10, 0, 156);
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.8s;
+            font-size: 30px;
+            font-family: 'Gowun Batang', sans-serif;
+        }
+
+        .image-container:hover .overlay-text {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .button-link {
+            position: absolute;
+            bottom: 10%;
+            right: 10%;
+            padding: 5px 20px;
+            font-size: 40px;
+            background-color: #ffffff;
+            color: #2c79fd;
+            border: none;
+            border-radius: 90px;
+            cursor: pointer;
+            box-shadow: 0 0 3px 3px rgb(55, 108, 255);
+            transition: 0.5s;
+            text-decoration: none;
+        }
+
+        
+        .button-link:hover {
+            box-shadow: 0 0 8px 8px rgb(221, 226, 255);
+            background-color: rgb(0, 115, 600);
+            color: rgb(221, 226, 255);
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header></header>    <!-- 윗부분 공백을 주기 위한 부분 -->
+
+    <div class="wrapper"> <!-- 하트 1열 -->
+        <div class="image-container">
+        <img src="IMG_2284.PNG" alt="Small image 1">
+        <div class="overlay-text">스트레스<br>감소</div>
+        </div>
+
+        <div class="image-container ">
+        <img src="IMG_2284.PNG" alt="Small image 2">
+        <div class="overlay-text">기분<br>개선</div>
+        </div>
+
+         <div class="image-container">
+        <img src="IMG_2284.PNG" alt="Small image 3">
+        <div class="overlay-text">우울증<br>예방</div>
+        </div>
+
+        <div class="image-container">
+        <img src="IMG_2284.PNG" alt="Small image 4">
+        <div class="overlay-text">집중력<br>향상</div>
+    </div>
+</div>
+
+<div class="wrapper"> <!-- 하트 2열 -->
+    <div class="image-container">
+        <img src="IMG_2284.PNG" alt="Small image 5">
+        <div class="overlay-text">안구 피로<br>완화</div>
+    </div>
+
+    <div class="image-container">
+        <img src="IMG_2284.PNG" alt="Small image 6">
+        <div class="overlay-text">호흡<br>개선</div>
+    </div>
+
+    <div class="image-container">
+        <img src="IMG_2284.PNG" alt="Small image 7">
+        <div class="overlay-text">마음의<br>여유</div>
+    </div>
+
+    <div class="image-container">
+        <img src="IMG_2284.PNG" alt="Small image 8">
+        <div class="overlay-text">자연과의<br>상호작용</div>
+    </div>
+</div>
+</body>
+
+ <body>
+      <a href="./page5.html" class="button-link">▷</a>
+ </body>
+
+</html>
