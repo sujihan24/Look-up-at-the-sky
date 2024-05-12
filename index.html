@@ -15,7 +15,7 @@
             overflow: hidden;
             background-image: url('look sky.jpeg');
             background-size: cover;
-            position: relative; 
+            position: relative; /* 부모 요소를 상대적으로 설정 */
         }
 
         .button-link {
@@ -42,8 +42,9 @@
         /* 새로운 스타일 추가 */
         .special-text {
             position: absolute;
-            top: calc(72% + 6px); /* 버튼 아래 10픽셀로 설정 */
-            left: 45%;
+            top: calc(72% + 10px); /* 버튼 아래 10픽셀로 설정 */
+            left: 50%; /* 텍스트를 가운데 정렬하기 위해 수정 */
+            transform: translateX(-50%); /* 가운데 정렬 */
             font-size: 18px;
             color: #ffffff;
             text-align: center;
@@ -54,7 +55,7 @@
 
 <body>
     <a href="./page2.html" class="button-link">Sky Therapy -></a>
-    <div class="special-text"> page4, 5에서 특별한 모양의 구름이 나오면 커서를 위에 올려보세요!</div>
+    <div class="special-text">특별한 모양의 구름이 나오면 커서를 위에 올려보세요!</div>
 </body>
 
 </html>
