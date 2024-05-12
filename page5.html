@@ -44,20 +44,40 @@
 
         .image-container {
             position: relative;
-            width: 300px;
-            height: 325px;
+            width: 140px;
+            height: 155px;
             overflow: hidden;
             margin: 8px;
             cursor: pointer;
         }
+        @keyframes tilt {
+            0% {
+            transform: rotate(0deg);
+            }
+            50% {
+            transform: rotate(30deg);
+            }
+            100% {
+            transform: rotate(0deg);
+            }  
+        }
+
 
         .image-container img {
             position: absolute;
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: opacity 0.5s ease;
+            transition: opacity 0.5s ease, transform 1.5s ease; 
         }
+        .image-container img {
+           animation: tilt 5s infinite; 
+        }
+        .image-container img.second-image {
+          opacity: 0;
+          transition: opacity 0.5s ease, transform 1.5s ease;
+        } 
+
 
         .image-container img.second-image {
             opacity: 0;
@@ -93,7 +113,7 @@
 <div class="image-row">
     <div class="image-container">
         <img src="IMG_2284.PNG" alt="First Image 1" class="first-image">
-        <img src="proto 봄전 준비1.jpeg" alt="Second Image 1" class="second-image">
+        <img src="proto 봄전 준비1.jpeg" alt="Second Image 1" class="second-image">
     </div>
     <div class="image-container">
         <img src="IMG_2288.PNG" alt="First Image 2" class="first-image">
@@ -161,7 +181,7 @@
     </div>
 </div>
 
-<!-- Third row with only one image -->
+
 <div class="image-row">
     <div class="image-container">
         <img src="14.png" alt="First Image 9" class="first-image">
